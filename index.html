@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website design using html and css</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <nav>
+          <!--Logo image --> 
+          <div class="logo">
+           <a href="#"> <img
+              src="logo.png"
+              alt="logo"
+              style="float: right; width: 192px; height: 42px"
+            /><a></div
+        >
+        <!--top navigation bar -->
+        <div class="topnav">
+          <li><a href="#" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Phone</a>
+            <div class="dropdown-content">
+              <a href="index2.html">P11</a>
+              <a href="index2.html">P12 </a>
+              <a href="index2.html">P12 Pro</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Accessories</a>
+            <div class="dropdown-content">
+              <a href="#">Earphones</a>
+              <a href="#">Chargers</a>
+              <a href="#">Cases</a>
+              <a href="#">Powerbanks</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Offers</a>
+            <div class="dropdown-content">
+                <a href="index2.html">Shop Mobile</a>
+                <a href="#">Shop Tablet</a>
+                <a href="#">Shop Wearables</a>
+            
+            </div>
+        </li>
+        <li class="dropdown" id="account">
+            <a href="#" class="dropbtn" id="account">Account</a>
+            <div class="dropdown-content">
+                <a href="login\index.html">Login/Signup</a>
+                
+                
+            </div>
+        </li>
+        </div>
+      </nav>
+
+            <div class="information">
+                <div class="overlay" id="overlay"></div>
+                <img src="images/mobile.png" class="mobile">
+                <div class="circle" id="circle" >
+                    
+                    <div class="feature one" >
+                        <img src="images/camera.png">
+                        <div>
+                            <h1>Camera</h1>
+                            <p>25MP,Wide Angle Lens</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/processor.png">
+                        <div>
+                            <h1>Processor</h1>
+                            <p>Snapdragon 865,Qualcomm® </p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/display.png">
+                        <div>
+                            <h1>Display</h1>
+                            <p>6" display, <br>Dynamic AMOLED 2X, <br>Corning Gorilla Glass 6</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/battery.png">
+                        <div>
+                            <h1>Battery</h1>
+                            <p>Li-Ion 4000 mAh,<br> Fast charging 25W,
+                                <br>Reverse wireless charging 4.5W</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="controls">
+                <input type="image" onclick="rotateImg()" src="images/arrow.png" alt="arrow" id="upbtn" >
+                <h3>Features</h3>
+                <input type="image" onclick="rotateImgrev()" src="images/arrow.png" alt="arrow" id="downbtn" > 
+            </div>
+    </div>
+    <script>
+     
+      let rotation = 0;
+      function rotateImg() {
+        rotation += 90; // add 90 degrees, you can change this as you want
+        /*if (rotation === 360) {
+          // 360 means rotate back to 0
+          rotation = 0;
+        }*/
+        document.querySelector(
+          "#circle"
+        ).style.transform = `rotate(${rotation}deg)`;
+      }
+      
+     
+      function rotateImgrev() {
+        rotation += -90; // add 90 degrees, you can change this as you want
+        /*if (rotation === 360) {
+          // 360 means rotate back to 0
+          rotation = 0;
+        }*/
+        document.querySelector(
+          "#circle"
+        ).style.transform = `rotate(${rotation}deg)`;
+      }
+    </script>
+  </body>
+</html>
